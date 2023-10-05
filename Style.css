@@ -1,0 +1,338 @@
+body{
+font-family: 'Arial', sans-serif;
+border-width: 5px;
+margin: 0;
+padding: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: #898980;
+    color: #fff;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+   }
+   /* Target a specific element by its HTML tag or class */
+p {
+    /* Set the font family */
+    font-family: Arial, sans-serif;
+    
+    /* Set the font size */
+    font-size: 16px;
+    
+    /* Set the font weight (e.g., normal, bold) */
+    font-weight: normal;
+    
+    /* Set the text color */
+    color: #333; /* You can use color names, hex codes, or RGB values */
+    
+    /* Set the line height (spacing between lines) */
+    line-height: 1.5;
+    
+    /* Set text alignment */
+    text-align: left; /* Options: left, right, center, justify */
+    
+    /* Add text shadow (optional) */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    
+    /* Add text decoration (e.g., underline, overline) */
+    text-decoration: none; /* Options: none, underline, overline, line-through */
+    
+    /* Add letter spacing (kerning) */
+    letter-spacing: 1px;
+    
+    /* Add word spacing (tracking) */
+    word-spacing: 2px;
+  }
+  
+a{
+    text-decoration: none;
+    color:white;
+
+}
+  
+  
+ 
+  
+  /* Change link style on hover */
+  a:hover {
+    color: #FF5733;
+  }
+  
+h1 {
+    flex: 1; /* Allow the h1 to expand and take up the available space */
+    margin-left: 10px; /* Add left margin for spacing */
+}
+nav {
+    margin-left: 10px; /* Add left margin for spacing */
+}
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Change link text color */
+    margin-right: 10px; /* Add right margin for spacing between links */
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: none;
+}
+
+/* Add this CSS code for the main section grid layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(250px, 1fr)); /* Responsive grid with a minimum column width of 250px */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px; /* Add padding to the main section */
+    grid-auto-rows: auto; /* Set row height to auto */
+    grid-template-areas: 
+    "header"
+    "image0"
+    "about"
+    "experience"
+    "hobbies"
+    "images"
+    "papers"
+    "blog"
+    "footer";
+}
+
+.section {
+    background-color:#C5DAC1; /* Background color for each section */
+    padding: 10px; /* Add padding to each section */
+    text-align: center; /* Center the content in each section */
+    border: 2px solid #b5b7bc; /* Updated border */
+    border-radius: 5px;
+    height: 100%; /* Make sections take up the full height of the row */
+}
+.section h2 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #898980;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Style the images within the grid */
+.image0 {
+    grid-area: image0;
+    align-items:center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #b5b7bc;
+    max-width: 100%; /* Ensure images don't exceed their container width */
+}
+
+/* Style the "About" section within the grid */
+.about {
+    grid-area: about;
+    color: #ebebeb
+     /* Text color for the "About" section */
+}
+/* Style the "Academic Experience" section */
+#experience {
+    grid-area: experience;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the "Hobbies" section */
+#hobbies {
+    grid-area: hobbies;
+    text-align: start;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the list items in both sections */
+#experience ul,
+#hobbies ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#experience ul li,
+#hobbies ul li {
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+/* Add background color to list items in the "Academic Experience" section */
+#experience ul li {
+    background-color:#7B9E87;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style list items in the "Hobbies" section */
+#hobbies ul li {
+    background-color:#7B9E87;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Style individual images */
+#images img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+/* Add styling for the papers section */
+#papers {
+    grid-area: papers;
+    text-align: center;
+}
+
+
+/* Style the paper links as boxes */
+#papers .paper-links {
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
+}
+
+#papers .paper-links a {
+    margin: 10px;
+    padding: 10px;
+    background-color: #7B9E87; /* Updated background color */
+    color: #0c0b0b;
+    text-decoration: none;
+    border-radius: 10px; /* Increase border radius for a more box-like appearance */
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Add hover effect to the paper links */
+#papers .paper-links a:hover {
+    background-color: #BCD0C7; /* Darker background color on hover */
+    text-decoration: none;
+}
+/* Update styling for the blog section */
+#blog {
+    grid-area: blog;
+    text-align: center;
+}
+
+/* Style the blog links as boxes */
+#blog .blog-links {
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
+}
+
+#blog .blog-links a {
+    margin: 10px;
+    padding: 10px;
+    background-color: #7B9E87; /* Updated background color */
+    color: #100f0f;
+    text-decoration: none;
+    border-radius: 10px; /* Increase border radius for a more box-like appearance */
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Add hover effect to the blog links */
+#blog .blog-links a:hover {
+    background-color: #BCD0C7; /* Darker background color on hover */
+    text-decoration: none;
+}
+
+/* Style the icons within the paper-links and blog-links */
+#papers .paper-links img,
+#blog .blog-links img {
+    width: 20px; /* Set the width of the icons */
+    height: 20px; /* Set the height of the icons */
+    margin-right: 0px; /* Add spacing to the right of the icons */
+    vertical-align: start; /* Align the icons vertically in the middle */
+}
+
+/* Center align the icons with text in paper-links and blog-links */
+#papers .paper-links a,
+#blog .blog-links a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjust alignment as needed */
+}
+
+
+
+   /* Footer Styles */
+   footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+ }
+
+  /* Style for the "Go to Top" button */
+  .scroll-to-top {
+    display: inline-block; /* Display as inline-block to be on the left side */
+    padding: 10px 20px;
+    background-color: #7B9E87;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the button when hovered */
+.scroll-to-top:hover {
+    background-color: #BCD0C7;
+}
+
+
+/* Responsive layout for larger screens */
+@media (min-width: 1000px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns for larger screens */
+    }
+}
+
+
+ 
+ /* Responsive layout for larger screens */
+@media (min-width: 1000px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    h1,nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
